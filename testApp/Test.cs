@@ -7,7 +7,7 @@ using Xamarin.UITest.Configuration;
 
 namespace testApp
 {
-    [TestFixture()]
+    [TestFixture]
     public class Test
     {
         iOSApp app;
@@ -16,7 +16,7 @@ namespace testApp
         public void BeforeEachTest()
         {
             string deviceUDID = Environment.GetEnvironmentVariable("IOS_SIMULATOR_UDID");
-            string bundleID = "your.applications.bundle.id";
+            string bundleID = "com.memberzonestaff.alpha";
 
             app = ConfigureApp
                 .iOS
@@ -33,7 +33,7 @@ namespace testApp
         //    app = ConfigureApp.iOS.AppBundle(path).DeviceIdentifier(device).PreferIdeSettings().EnableLocalScreenshots().StartApp();
         //}
 
-        [Test()]
+        [Test]
         public void TestCase()
         {
             //app.WaitForElement(c => c.Text("SignUp"));
